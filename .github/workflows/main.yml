@@ -1,0 +1,11 @@
+name: dispatch-reciever
+on:
+  repository_dispatch:
+    types:
+      - image-published
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "Deploying"
